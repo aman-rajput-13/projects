@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAnimeHome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            padding: 30px;
+            margin-top: 60px;
+            display: flex;
+            background-color: green;
+            background-image: url(wallpaper.png)  ;
+            background-size: cover;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .episode-list {
+            width: 30%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .episode-list h2 {
+            text-align: center;
+        }
+        .episode-list ul {
+            list-style-type: none;
+            padding: 0px;
+        }
+        .episode-list li {
+            padding: 10px;
+            border-bottom: 1px solid black;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .episode-list li:hover {
+            background-color:  #28a745;
+        }
+        .video-player {
+            color: white;
+            width: 70%;
+            padding: 20px;
+            background-color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .video-player h2 {
+            text-align: center;
+        }
+        .watch-now {
+            
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: white;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .watch-now:hover {
+            background-color: #28a745 ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="episode-list">
+            <h2>Episodes</h2>
+            <ul>
+                <li onclick="playEpisode('Episode 1')">Episode 1</li>
+                
+            </ul>
+        </div>
+        <div class="video-player">
+            <h2>Now Playing: <span id="current-episode">Select an episode</span></h2>
+            <iframe id="video-frame" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+            <a href="#" class="watch-now" onclick="playEpisode('Episode 1')" style="color: black;">Watch Now</a>
+        </div>
+    </div>
+
+    <script>
+        function playEpisode(episode) {
+            document.getElementById('current-episode').innerText ="Episode 1";
+            // Replace with your actual video URL
+            document.getElementById('video-frame').src = "op1.mp4" ; // Example URL
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Streaming</title>
+    
+    <script>
+        function watchAnime(title) {
+            alert("You clicked to watch: " + title);
+}
+    </script>
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.anime-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.anime-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.anime-card img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+    <header>
+        <h1>Anime Stream</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#popular">Popular</a></li>
+                <li><a href="#latest">Latest</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Featured Anime</h2>
+            <div class="anime-list">
+                <div class="anime-card">
+                    <img src="anime1.jpg" alt="Anime 1">
+                    <h3>Anime Title 1</h3>
+                    <button onclick="watchAnime('Anime Title 1')">Watch Now</button>
+                </div>
+                <div class="anime-card">
+                    <img src="anime2.jpg" alt="Anime 2">
+                    <h3>Anime Title 2</h3>
+                    <button onclick="watchAnime('Anime Title 2')">Watch Now</button>
+                </div>
+                <div class="anime-card">
+                    <img src="anime3.jpg" alt="Anime 3">
+                    <h3>Anime Title 3</h3>
+                    <button onclick="watchAnime('Anime Title 3')">Watch Now</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="popular">
+            <h2>Popular Anime</h2>
+            <div class="anime-list">
+                <div class="anime-card">
+                    <img src="anime4.jpg" alt="Anime 4">
+                    <h3>Anime Title 4</h3>
+                    <button onclick="watchAnime('Anime Title 4')">Watch Now</button>
+                </div>
+                <div class="anime-card">
+                    <img src="anime5.jpg" alt="Anime 5">
+                    <h3>Anime Title 5</h3>
+                    <button onclick="watchAnime('Anime Title 5')">Watch Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Anime Stream. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
